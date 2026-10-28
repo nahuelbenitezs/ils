@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#faf8f5" />
+  <meta name="description" content="NAILÉ Studio: diseñá tus uñas, explorá estilos, importá imágenes y guardá tus manicuras." />
+  <title>NAILÉ — Tu estudio de nail art</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+:root{--paper:#faf8f5;--white:#fff;--ink:#28232b;--muted:#99929a;--line:#eee9e8;--rose:#b65f83;--rose-light:#fbedf0;--purple:#7c668b;--shadow:0 12px 40px rgba(66,43,60,.055)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:'DM Sans',sans-serif;font-size:13px;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #ce91ae;outline-offset:3px}h1,h2,p{margin-top:0}button{border:none}a{color:inherit;text-decoration:none}.app-shell{display:grid;grid-template-columns:264px minmax(0,1fr);min-height:100vh}.sidebar{height:100vh;position:sticky;top:0;background:#fff;border-right:1px solid #eee9e6;display:flex;flex-direction:column;padding:27px 17px 16px;z-index:2}.brand{display:flex;gap:10px;align-items:center;padding:0 15px 26px}.brand-symbol{background:#fbeaf0;width:38px;height:38px;display:grid;place-items:center;border-radius:13px;font-size:24px;color:#a4527c}.brand-name{font-family:'Playfair Display',serif;font-weight:700;font-size:27px;letter-spacing:-1.7px;line-height:1}.brand-period{color:#bb6689}.brand-name small{display:block;font-family:'DM Sans',sans-serif;font-size:8px;letter-spacing:2.2px;color:#a69ba3;font-weight:700;margin-top:4px}.side-scroll{overflow:auto;flex:1;padding:0 5px;scrollbar-width:thin;scrollbar-color:#e5dce1 transparent}.side-heading{display:flex;align-items:center;gap:12px;color:#a6a0a3;letter-spacing:2px;font-weight:700;font-size:9px;margin:5px 11px 14px}.heading-line{height:1px;background:#f0e9e8;flex:1}.nav-link{display:flex;align-items:center;gap:13px;width:100%;padding:12px 15px;border-radius:10px;background:transparent;text-align:left;color:#7b737a;font-weight:700;margin-bottom:5px}.nav-link.active{background:#f9ebf0;color:#ab5378}.nav-ico{font-size:20px;font-weight:400;width:20px;text-align:center}.nav-end{margin-left:auto;font-size:15px}.saved-counter{margin-left:auto;background:#f5f1f1;border-radius:7px;padding:3px 8px;color:#89808b}.templates-label{margin-top:37px}.section-title-row{display:flex;justify-content:space-between;align-items:center;gap:5px}.section-title-row h2{font-family:'Playfair Display',serif;font-size:18px;line-height:1.2;margin:2px 0 7px 10px;letter-spacing:-.4px}.mini-label{font-size:8px;letter-spacing:1px;color:#b6aab1;font-weight:700;white-space:nowrap;margin-right:4px}.side-desc{color:#9a949b;margin:0 0 17px 10px;line-height:1.5;font-size:11px}.filter-row{display:flex;gap:5px;margin:0 0 14px 3px;flex-wrap:wrap}.filter-chip{background:#f8f6f6;color:#8f858e;font-size:10px;border:1px solid #f0ebec;border-radius:50px;padding:7px 10px}.filter-chip.selected{background:#a85c7d;color:#fff;border-color:#a85c7d}.preset-list{display:grid;gap:9px}.preset-card{background:#fff;border:1px solid #efeaeb;border-radius:13px;padding:8px;display:flex;align-items:center;gap:10px;text-align:left;width:100%;transition:.2s;min-width:0}.preset-card:hover{border-color:#d6a9bb;box-shadow:0 3px 12px #c889a223;transform:translateY(-1px)}.preset-card.active{background:#fff7fa;border:1.5px solid #c985a1}.preset-thumb{background:#f7eef0;border-radius:9px;width:83px;height:66px;flex:0 0 83px;display:block}.preset-details{display:flex;flex-direction:column;gap:5px;min-width:0}.preset-name{font-weight:700;font-size:11px;line-height:1.25}.preset-sub{color:#b2a5aa;font-size:10px}.preset-details .tag{font-size:9px;color:#b76d8d}.pinterest-box{background:linear-gradient(145deg,#f9eef2,#fbf7f1);border:1px solid #f4e7ed;border-radius:15px;padding:15px 14px;margin-top:18px;display:grid;grid-template-columns:22px 1fr;gap:7px}.pinterest-mark{font-size:24px;line-height:1;color:#b72e53;font-weight:800;font-family:Georgia,serif}.pinterest-box strong{font-size:11px}.pinterest-box p{font-size:10px;line-height:1.5;color:#8f828b;margin:5px 0 0}.pinterest-link{grid-column:1/-1;font-size:10px;background:white;border-radius:8px;text-align:center;padding:10px;font-weight:700;color:#a85474;margin-top:6px}.side-footer{color:#a8a0a7;font-size:10px;padding:17px 12px 2px;border-top:1px solid #f4eff0;display:flex;align-items:center;gap:8px}.status-dot{width:6px;height:6px;border-radius:50%;background:#84b79b;display:inline-block;box-shadow:0 0 0 3px #e8f4ed;flex:0 0 auto}.footer-heart{margin-left:auto;color:#ba7592;font-size:18px}.main-area{min-width:0}.topbar{height:72px;background:#fff;border-bottom:1px solid #f0ebeb;display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px}.breadcrumb{display:flex;align-items:center;gap:12px;letter-spacing:1.5px;font-size:10px;font-weight:700;color:#b0a5ac}.bread-sep{font-size:16px;color:#ddd5d9}.crumb-current{color:#9b657d;letter-spacing:0}.top-actions{display:flex;gap:9px;align-items:center}.autosave-label{color:#9c939a;font-size:10px;display:flex;align-items:center;gap:9px;margin-right:9px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 15px;font-size:11px;font-weight:700;border-radius:9px;white-space:nowrap}.btn-light{background:white;border:1px solid #e9e1e4;color:#665c67}.btn-light span:first-child{font-size:17px;color:#a86585}.btn-dark{background:#302632;color:white;box-shadow:0 4px 10px #3326341e}.btn-icon{font-size:17px;line-height:0}.content-layout{max-width:1700px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 315px;align-items:start;gap:26px;padding:34px 30px 40px}.editor-column{min-width:0}.hero-intro{padding:3px 7px 21px}.eyebrow{font-size:10px;color:#ba7190;font-weight:800;letter-spacing:2px;display:flex;align-items:center;gap:8px}.spark{font-size:20px;font-weight:400}.hero-title-row{display:flex;align-items:center;gap:18px}.hero-intro h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(30px,3vw,45px);font-weight:600;line-height:1.14;letter-spacing:-1.65px;margin:11px 0 9px}.hero-intro h1 em,.settings-header h2 em,.saved-modal h2 em{font-weight:500;color:#b25e83}.hero-doodle{color:#e6bdcb;font-size:28px}.hero-intro p{font-size:12px;color:#8f878f;line-height:1.7;margin:0}.canvas-card{background:white;border:1px solid #eee6e8;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.canvas-toolbar{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;gap:10px}.canvas-title{display:flex;gap:9px;align-items:center;color:#635764;font-weight:800;letter-spacing:1.7px;font-size:10px}.live-dot{height:8px;width:8px;background:#a9ceaa;box-shadow:0 0 0 3px #eaf5e8;border-radius:50%;margin-right:3px}.preview-tag{color:#9fb49d;background:#f2f8f1;padding:5px 7px;border-radius:4px;font-size:8px;letter-spacing:.8px}.canvas-buttons{display:flex;align-items:center;gap:5px}.icon-action{background:white;color:#857580;border:1px solid #f0e7eb;border-radius:8px;padding:9px 10px;font-size:12px;font-weight:700}.icon-action:hover{background:#fff3f7}.icon-action span{font-size:10px}.canvas-wrap{position:relative;background:#f8f0ef;overflow:hidden;touch-action:none}.canvas-wrap canvas{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair}.canvas-watermark{position:absolute;right:17px;bottom:14px;font-weight:800;color:#bc9aa8;letter-spacing:2px;font-size:9px;opacity:.62;pointer-events:none}.canvas-watermark span{font-weight:400;margin:0 5px}.canvas-hint{position:absolute;left:17px;bottom:13px;padding:8px 11px;border:1px solid #f5e7ea;border-radius:50px;background:#fffcfbc2;font-size:10px;color:#9b7f8a;pointer-events:none}.canvas-footer{display:flex;justify-content:space-between;align-items:center;min-height:63px;padding:10px 18px;gap:7px}.finger-key{display:flex;align-items:center;gap:6px}.finger-button{background:#faf8f8;border:1px solid transparent;border-radius:8px;padding:7px 8px;font-size:10px;color:#999099;transition:.2s}.finger-button.active{background:#f6e8ee;color:#ab5f7c;border-color:#ebcedc;font-weight:700}.finger-button b{font-weight:700}.history-actions{display:flex;gap:6px}.history-actions button{background:#fff;border:1px solid #eee8e9;border-radius:9px;padding:9px 11px;color:#9a8b95;font-weight:700;font-size:15px}.history-actions span{font-size:10px;font-weight:500}.history-actions button:disabled{opacity:.35;cursor:default}.below-canvas{display:flex;align-items:stretch;justify-content:space-between;gap:14px;margin-top:17px}.tip-card{background:#fff;border-radius:14px;padding:16px;display:flex;align-items:center;gap:12px;border:1px solid #f0eaed;flex:1}.tip-symbol{width:37px;height:37px;flex:0 0 37px;background:#f9eaf0;border-radius:11px;color:#b66989;display:grid;place-items:center;font-size:22px}.tip-card strong{font-size:11px}.tip-card p{color:#9a909a;font-size:10px;line-height:1.5;margin:4px 0 0}.tool-quickbar{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:#fff;border:1px solid #f0eaed;border-radius:14px;padding:12px 16px}.quickbar-label{font-size:9px;letter-spacing:1.5px;color:#a99ca5;font-weight:700}.quick-buttons{display:flex;gap:6px}.quick-tool{width:31px;height:31px;background:#faf7f8;border:1px solid #f2ebee;color:#827782;border-radius:8px;font-size:20px;display:grid;place-items:center}.quick-tool.active{background:#ac6080;color:white}.settings-panel{background:#fff;border:1px solid #eee6e7;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);align-self:start}.settings-header{padding:26px 24px 20px}.settings-eyebrow{display:flex;justify-content:space-between;color:#b27991;letter-spacing:1.5px;font-size:9px;font-weight:800}.settings-eyebrow span{font-size:15px}.settings-header h2{font-family:'Playfair Display',serif;font-size:27px;letter-spacing:-.9px;font-weight:600;line-height:1.25;margin:12px 0 6px}.settings-header p{font-size:11px;color:#a69ba4;margin:0}.tab-bar{display:grid;grid-template-columns:repeat(3,1fr);padding:0 16px;border-bottom:1px solid #f1ebeb}.tab{background:white;border-bottom:2px solid transparent;font-weight:700;color:#a29ba2;font-size:11px;padding:14px 2px}.tab.active{color:#b25f83;border-color:#b25f83}.selected-nail-row{display:flex;justify-content:space-between;align-items:center;padding:19px 24px 16px;background:#fdfbfb}.selected-nail-row>div{display:flex;gap:8px;align-items:center}.form-label{font-size:9px;font-weight:800;letter-spacing:1.15px;color:#776a75}.selected-nail-row .form-label{color:#a89ca4}.selected-nail-row strong{font-size:11px;color:#a4597d}.toggle-row{display:flex;align-items:center;gap:7px;font-weight:700;font-size:10px;color:#8b7e89;cursor:pointer}.toggle-row input{position:absolute;opacity:0;width:1px;height:1px}.switch{display:inline-block;width:27px;height:16px;border-radius:15px;background:#ddd4da;position:relative;transition:background .2s}.switch:before{content:"";position:absolute;top:3px;left:3px;width:10px;height:10px;border-radius:50%;background:white;transition:transform .2s}.toggle-row input:checked +.switch{background:#b76e90}.toggle-row input:checked +.switch:before{transform:translateX(11px)}.tab-panel{padding:0 22px 15px}.tab-panel[hidden]{display:none!important}.field-section{padding:20px 0;border-bottom:1px solid #f2ecee}.field-section.last-section{border:0}.field-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:13px}.hex-label{font-size:10px;font-weight:700;color:#b77b94;font-family:monospace;letter-spacing:.1px}.current-color{height:48px;display:flex;align-items:center;gap:11px;background:#faf8f9;border:1px solid #f0eaec;border-radius:10px;padding:7px 11px;margin-bottom:13px}.current-color>span:first-child{width:28px;height:28px;border-radius:9px;background:#f1c0c6;box-shadow:inset 0 0 0 1px #0000000a}.current-color>span:nth-child(2){font-size:11px;flex:1;font-weight:700;color:#6f626d}.current-color input,.art-color-row input{width:29px;height:29px;padding:0;border:none;background:none;cursor:pointer;border-radius:6px}.current-color input::-webkit-color-swatch-wrapper,.art-color-row input::-webkit-color-swatch-wrapper{padding:0}.current-color input::-webkit-color-swatch,.art-color-row input::-webkit-color-swatch{border-radius:6px;border:2px solid white;box-shadow:0 0 0 1px #ddd}.swatch-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:8px}.swatch{width:27px;height:27px;border-radius:50%;border:3px solid white;box-shadow:0 0 0 1px #e8e0e3;justify-self:center;transition:transform .2s}.swatch:hover{transform:scale(1.14)}.swatch.active{box-shadow:0 0 0 2px #ae5f83}.shape-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.shape-option{background:#faf8f9;border:1px solid #f2ebed;border-radius:9px;padding:10px 3px 8px;display:flex;align-items:center;justify-content:center;gap:8px;flex-direction:column;color:#92858e;font-size:9px;min-width:0}.shape-option.active{background:#fff4f8;border-color:#dcaec2;color:#a75578;font-weight:700}.shape-icon{display:block;background:linear-gradient(110deg,#f5bacd,#eeb8c9 70%,#ffdce7);height:31px;width:20px;border:1px solid #d9a0b0}.shape-icon.almond{clip-path:polygon(50% 0,89% 28%,100% 80%,83% 100%,17% 100%,0 80%,11% 28%)}.shape-icon.oval{border-radius:50% 50% 38% 38%}.shape-icon.square{border-radius:3px 3px 5px 5px}.shape-icon.coffin{clip-path:polygon(18% 0,82% 0,100% 64%,91% 100%,9% 100%,0 64%)}.shape-icon.stiletto{clip-path:polygon(50% 0,100% 67%,85% 100%,15% 100%,0 67%)}.range{appearance:none;-webkit-appearance:none;background:#f0e5e9;height:5px;border-radius:10px;width:100%;accent-color:#b8688a;cursor:pointer}.range::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:#b8688a;border:3px solid white;box-shadow:0 0 0 1px #b8688a}.range::-moz-range-thumb{width:13px;height:13px;border-radius:50%;background:#b8688a;border:2px solid white}.inline-value{color:#b06688;font-size:10px}.range-labels{display:flex;justify-content:space-between;color:#a8a0a6;font-size:9px;margin-top:10px}.finish-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.finish{border-radius:9px;background:#faf8f9;border:1px solid #eee8eb;padding:10px 3px;display:flex;flex-direction:column;align-items:center;gap:6px;color:#887b85;font-size:9px}.finish.active{border-color:#d5a0b7;background:#fff5f8;color:#a65277;font-weight:700}.finish-dot{display:block;width:23px;height:23px;border-radius:50%;background:#edbbc9}.finish-dot.glossy{background:linear-gradient(110deg,#c9829e,#fee1ec 40%,#d895b0 70%)}.finish-dot.matte{background:#d5a1af}.finish-dot.chrome{background:linear-gradient(120deg,#b89ea8,#fff,#d7acc5,#9c9ab2)}.skin-row{display:flex;gap:11px}.skin-swatch{width:28px;height:28px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px #ebe2e3}.skin-swatch.active{box-shadow:0 0 0 2px #ad5e81}.settings-bottom{background:#fdf9fa;padding:13px 20px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;color:#b79da8;font-size:10px}.settings-bottom span{font-size:18px}.settings-bottom p{margin:0}.art-tool-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.art-tool{background:#faf7f9;border:1px solid #f0e8eb;border-radius:9px;padding:7px 2px;color:#948791;font-size:9px;display:flex;flex-direction:column;align-items:center;gap:7px}.art-tool span{font-size:22px;height:22px;line-height:20px}.art-tool.active{background:#fff0f5;color:#ae5e82;border-color:#dfaabf;font-weight:700}.help-text{margin:12px 0 0;color:#a8a0a6;line-height:1.6;font-size:10px}.art-color-row{display:flex;gap:12px;align-items:center}.art-palette{display:flex;gap:7px;flex:1;flex-wrap:wrap}.art-swatch{width:23px;height:23px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px #eee4e8}.art-swatch.active{box-shadow:0 0 0 2px #a9587e}.size-row{display:flex;align-items:center;gap:10px;margin-top:18px}.size-row label{font-size:10px;color:#928790;white-space:nowrap}.size-row .range{flex:1;width:50px}.size-row>span{font-size:10px;color:#a35a79;width:35px;text-align:right}.sticker-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.sticker-grid button{font-size:24px;background:#faf7f8;border:1px solid #f0e8eb;color:#b45b84;border-radius:9px;height:48px}.sticker-grid button.active{background:#fff0f5;border-color:#d69cb6}.effect-grid{display:grid;gap:7px}.effect-button{display:flex;align-items:center;gap:12px;text-align:left;padding:10px 12px;border-radius:10px;background:#fbf8f9;border:1px solid #f2eaed;color:#b36a85}.effect-button>span:first-child{width:30px;height:30px;background:#f6e6ec;display:grid;place-items:center;border-radius:9px;font-size:19px}.effect-button>div{display:flex;flex-direction:column;gap:4px;flex:1}.effect-button strong{font-size:11px;color:#695b67}.effect-button small{font-size:9px;color:#a8a0a5}.effect-button>span:last-child{font-size:18px}.clear-art-button{width:100%;margin:15px 0 6px;padding:12px 7px;border-radius:9px;background:#fff5f6;color:#a6637e;font-size:11px;font-weight:700}.upload-zone{width:100%;padding:22px 10px;border:1.5px dashed #dcb7c5;border-radius:13px;background:#fff9fb;display:flex;flex-direction:column;align-items:center;gap:9px;color:#aa7087}.upload-illustration{display:grid;place-items:center;width:49px;height:49px;background:#f6e6ed;border-radius:12px;font-size:27px}.upload-zone strong{font-size:11px;color:#6c5a66}.upload-zone span:nth-child(3){font-size:9px}.upload-link{font-size:10px;font-weight:700;background:#b8698a;color:#fff;padding:9px 15px;border-radius:8px;margin-top:5px}.reference-preview{display:flex;gap:12px;align-items:center;border:1px solid #f0e8ea;padding:8px;border-radius:9px}.reference-preview img{width:75px;height:75px;object-fit:cover;border-radius:7px;background:#f3e9ea}.reference-preview div{display:flex;flex-direction:column;gap:6px;min-width:0}.reference-preview strong{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:150px}.reference-preview span{font-size:10px;color:#9d939e}.reference-preview button{font-size:10px;color:#b86683;background:none;padding:0;text-align:left}.apply-image-btn{background:#ad5e80;color:white;border-radius:9px;padding:13px 9px;width:100%;font-weight:700;font-size:11px;margin-top:16px}.reference-note{display:flex;gap:13px;background:#faf4f7;border:1px solid #f3e3e9;border-radius:12px;padding:15px;margin:19px 0}.reference-note>span{font-size:21px;color:#b66a8c}.reference-note strong{font-size:11px}.reference-note p{margin:6px 0 0;color:#95848e;font-size:10px;line-height:1.6}.pinterest-search{margin-bottom:20px}.pinterest-search>div:nth-child(2){display:flex;gap:6px;margin-top:12px}.pinterest-search input{border:1px solid #efe4e8;border-radius:8px;padding:11px 9px;min-width:0;width:100%;outline:none;font-size:11px}.pinterest-search>div:nth-child(2) button{background:#ab5e81;color:white;border-radius:8px;width:38px;flex:0 0 38px;font-size:19px}.search-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}.search-tags button{border-radius:30px;padding:6px 10px;font-size:10px;background:#f8f1f4;color:#a85b7d}.mobile-inspo{display:none}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);z-index:30;opacity:0;pointer-events:none;background:#302832;color:#fff;border-radius:12px;padding:12px 20px;box-shadow:0 10px 30px #3a263b45;font-size:12px;max-width:90vw;text-align:center;transition:.25s}.toast.visible{opacity:1;transform:translate(-50%,0)}.modal-backdrop{position:fixed;inset:0;z-index:25;background:#251b29a8;display:grid;place-items:center;padding:20px;backdrop-filter:blur(4px)}.modal-backdrop[hidden]{display:none}.saved-modal{background:#fff;width:min(740px,100%);border-radius:20px;padding:27px;max-height:85vh;overflow:auto;box-shadow:0 30px 80px #0003}.modal-top{display:flex;justify-content:space-between;align-items:flex-start}.saved-modal h2{font-family:'Playfair Display',serif;font-size:32px;margin:10px 0 20px}.modal-close{font-size:25px;color:#a66b84;background:#faf0f4;border-radius:9px;width:35px;height:35px}.saved-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.saved-item{padding:9px;border:1px solid #eee6eb;border-radius:12px;overflow:hidden}.saved-item canvas{width:100%;border-radius:9px;background:#f7ecef}.saved-item strong{font-size:11px;display:block;margin:8px 0 5px}.saved-date{font-size:9px;color:#aaa0a9}.saved-item-actions{display:flex;gap:6px;margin-top:10px}.saved-item-actions button{font-size:10px;border-radius:6px;padding:8px;background:#f7edf1;color:#a15e7a;flex:1}.saved-item-actions .delete-saved{background:#f9f7f7;color:#afa6ac;flex:0 0 32px}.empty-saved{grid-column:1/-1;text-align:center;padding:45px 8px;color:#a398a1}.empty-saved span{display:block;font-size:35px;margin-bottom:8px}.modal-bottom{font-size:10px;color:#a9a0a6;margin-top:17px;text-align:center}
+@media(min-width:1500px){.app-shell{grid-template-columns:278px minmax(0,1fr)}.content-layout{grid-template-columns:minmax(0,1fr) 345px;gap:32px;padding-left:40px;padding-right:40px}.settings-panel{max-width:365px}.tab-panel{padding-left:25px;padding-right:25px}.settings-header{padding-left:27px}.preset-thumb{width:94px;flex-basis:94px;height:68px}}
+@media(max-width:1280px){.app-shell{grid-template-columns:235px minmax(0,1fr)}.sidebar{padding-left:12px;padding-right:12px}.content-layout{grid-template-columns:minmax(0,1fr) 290px;gap:16px;padding:26px 18px}.topbar{padding:0 20px}.autosave-label{display:none}.tab-panel{padding:0 16px 14px}.settings-header{padding:21px 18px}.shape-option{font-size:8px}.swatch-grid{gap:5px}.swatch{width:24px;height:24px}.finish{font-size:8px}.preset-thumb{width:69px;flex-basis:69px}.preset-card{gap:6px}.preset-name{font-size:10px}}
+@media(max-width:1050px){.app-shell{grid-template-columns:1fr}.sidebar{height:auto;position:relative;display:block;padding:12px 20px;border-right:0;border-bottom:1px solid #eee5e8}.brand{padding:0;display:inline-flex}.side-scroll,.side-footer{display:none}.content-layout{grid-template-columns:minmax(0,1fr) 305px}.topbar{height:60px}.hero-intro h1{font-size:32px}.canvas-footer{padding:9px}.finger-button{font-size:9px;padding:7px 5px}.history-actions span{display:none}}
+@media(max-width:800px){.content-layout{grid-template-columns:1fr;padding:18px 16px 35px;gap:22px}.hero-intro{padding:9px 3px 17px}.hero-intro h1{font-size:36px}.settings-panel{width:100%}.settings-header h2{font-size:28px}.tab-panel{padding:0 22px 13px}.shape-grid{gap:9px}.shape-option{font-size:10px}.swatch-grid{grid-template-columns:repeat(10,1fr)}.swatch{width:29px;height:29px}.settings-bottom{display:none}.canvas-toolbar{padding:13px}.below-canvas{margin-top:10px}.topbar{padding:0 15px}.btn{padding:9px 10px}}
+@media(max-width:520px){.sidebar{padding:11px 15px}.brand-symbol{width:30px;height:30px;font-size:19px;border-radius:9px}.brand-name{font-size:23px}.topbar{height:57px}.breadcrumb{font-size:8px;gap:6px}.crumb-current{display:none}.top-actions{gap:6px}.btn{font-size:10px;padding:9px}.btn-light span:nth-child(2){display:none}.btn-light span:first-child{font-size:19px;line-height:1}.btn-dark{font-size:10px}.content-layout{padding:15px 10px 30px;gap:17px}.hero-intro h1{font-size:30px;letter-spacing:-1.2px;margin-top:7px}.hero-intro p{font-size:11px}.eyebrow{font-size:8px}.canvas-card{border-radius:13px}.canvas-toolbar{padding:9px 11px}.canvas-title{gap:6px;letter-spacing:1px;font-size:9px}.preview-tag{font-size:7px}.icon-action{padding:7px}.icon-action span{font-size:9px}.canvas-wrap canvas{width:100%}.canvas-hint{font-size:9px;bottom:8px;left:7px;padding:5px 7px}.canvas-watermark{font-size:7px;right:8px;bottom:8px}.canvas-footer{display:block;padding:11px 8px}.finger-key{justify-content:space-between}.finger-button{font-size:10px;flex:1}.history-actions{margin-top:8px;justify-content:flex-end}.history-actions button{font-size:13px;padding:6px 12px}.history-actions span{display:inline;font-size:9px}.below-canvas{flex-direction:column;gap:8px}.tip-card{padding:10px}.tool-quickbar{flex-direction:row;padding:8px;justify-content:space-between}.tool-quickbar .quickbar-label{font-size:8px}.mobile-inspo{display:block;padding:16px;background:#f8eaf0;border-radius:12px;margin-top:12px}.mobile-inspo strong{font-size:12px}.mobile-inspo p{font-size:10px;color:#9d7e8d;line-height:1.6;margin:6px 0 9px}.mobile-inspo a{font-size:11px;color:#a85c7e;font-weight:700}.settings-header{padding:18px 20px 15px}.settings-header h2{font-size:26px}.tab-panel{padding:0 16px 15px}.selected-nail-row{padding:15px 17px}.field-section{padding:17px 0}.shape-grid{gap:5px}.shape-option{font-size:9px}.swatch-grid{grid-template-columns:repeat(8,1fr);gap:11px}.saved-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.saved-modal{padding:17px}.saved-modal h2{font-size:26px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+  </style>
+
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Biblioteca de diseños">
+      <a class="brand" href="#estudio" aria-label="NAILÉ Studio, inicio">
+        <span class="brand-symbol">✳</span>
+        <span class="brand-name">nailé<span class="brand-period">.</span><small>YOUR NAIL STUDIO</small></span>
+      </a>
+      <div class="side-scroll">
+        <div class="side-heading"><span>EL ESTUDIO</span><span class="heading-line"></span></div>
+        <button class="nav-link active" id="navStudio" type="button"><span class="nav-ico">✦</span> Mi estudio <span class="nav-end">↗</span></button>
+        <button class="nav-link" id="navSaved" type="button"><span class="nav-ico">♡</span> Mis diseños <span id="savedCount" class="saved-counter">0</span></button>
+        <div class="side-heading templates-label"><span>INSPIRACIÓN</span><span class="heading-line"></span></div>
+        <div class="section-title-row"><h2>Looks para empezar</h2><span class="mini-label">10 ESTILOS</span></div>
+        <p class="side-desc">Elegí uno como base y hacelo tuyo.</p>
+        <div class="filter-row" role="group" aria-label="Filtrar estilos">
+          <button class="filter-chip selected" data-filter="todos">Todos</button>
+          <button class="filter-chip" data-filter="delicados">Delicados</button>
+          <button class="filter-chip" data-filter="arte">Arte</button>
+          <button class="filter-chip" data-filter="brillos">Brillos</button>
+        </div>
+        <div class="preset-list" id="presetList" aria-label="Diseños predeterminados"></div>
+        <div class="pinterest-box">
+          <span class="pinterest-mark">p</span>
+          <div><strong>¿Más inspiración?</strong><p>Explorá ideas reales en Pinterest y traé tus favoritas.</p></div>
+          <a href="https://www.pinterest.com/search/pins/?q=nail%20art%20inspiration" target="_blank" rel="noopener noreferrer" class="pinterest-link">Explorar Pinterest ↗</a>
+        </div>
+      </div>
+      <div class="side-footer"><span class="status-dot"></span> Un espacio para crear <span class="footer-heart">♡</span></div>
+    </aside>
+
+    <main id="estudio" class="main-area">
+      <header class="topbar">
+        <div class="breadcrumb"><span>ESTUDIO</span><span class="bread-sep">/</span><span class="crumb-current">Tu lienzo creativo</span></div>
+        <div class="top-actions">
+          <span class="autosave-label"><span class="status-dot"></span> Guardado automático</span>
+          <button class="btn btn-light" id="saveBtn" type="button"><span>♡</span> <span>Guardar look</span></button>
+          <button class="btn btn-dark" id="exportBtn" type="button"><span class="btn-icon">↓</span> <span>Descargar PNG</span></button>
+        </div>
+      </header>
+
+      <div class="content-layout">
+        <section class="editor-column" aria-label="Diseñador de uñas">
+          <div class="hero-intro">
+            <div class="eyebrow"><span class="spark">✧</span> TU CREATIVIDAD, A TU MANERA</div>
+            <div class="hero-title-row"><h1>Diseñá algo <em>muy vos.</em></h1><span class="hero-doodle" aria-hidden="true">✳</span></div>
+            <p>Tu próximo set favorito empieza acá. Probá colores, jugá con las formas y dejá volar las ideas.</p>
+          </div>
+          <div class="canvas-card">
+            <div class="canvas-toolbar">
+              <div class="canvas-title"><span class="live-dot"></span><span>VISTA PREVIA</span><span class="preview-tag">EN VIVO</span></div>
+              <div class="canvas-buttons">
+                <button id="randomBtn" class="icon-action with-text" type="button" title="Generar un estilo al azar">✳ <span>Sorprendeme</span></button>
+                <button id="toggleViewBtn" class="icon-action with-text" type="button" title="Cambiar entre vista completa y detalle">⊞ <span id="viewText">Detalle</span></button>
+              </div>
+            </div>
+            <div class="canvas-wrap" id="canvasWrap">
+              <canvas id="nailCanvas" width="1000" height="600" aria-label="Lienzo interactivo para diseñar cinco uñas. Seleccioná una uña y dibujá sobre ella."></canvas>
+              <div class="canvas-watermark">NAILÉ <span>✦</span> STUDIO</div>
+              <div class="canvas-hint" id="canvasHint">✦ Tocá una uña para editarla</div>
+            </div>
+            <div class="canvas-footer">
+              <div class="finger-key" id="fingerKey"></div>
+              <div class="history-actions"><button id="undoBtn" title="Deshacer (Ctrl+Z)" type="button">↶ <span>Deshacer</span></button><button id="redoBtn" title="Rehacer (Ctrl+Y)" type="button">↷ <span>Rehacer</span></button></div>
+            </div>
+          </div>
+          <div class="below-canvas">
+            <div class="tip-card"><div class="tip-symbol">✧</div><div><strong>Tip creativo</strong><p id="creativeTip">Seleccioná una uña y cambiá su color. Activá «Todas» para pintar el set completo.</p></div></div>
+            <div class="tool-quickbar" aria-label="Herramientas rápidas"><span class="quickbar-label">HERRAMIENTAS</span><div class="quick-buttons"><button data-tool="select" class="quick-tool active" title="Seleccionar">↖</button><button data-tool="brush" class="quick-tool" title="Pincel">✎</button><button data-tool="dot" class="quick-tool" title="Puntos">•</button><button data-tool="eraser" class="quick-tool" title="Borrar adornos">⌫</button></div></div>
+          </div>
+          <div class="mobile-inspo"><strong>Ideas infinitas en Pinterest</strong><p>Buscá tu estilo favorito y subí una foto para usar de inspiración o textura.</p><a href="https://www.pinterest.com/search/pins/?q=nail%20art%20inspiration" rel="noopener noreferrer" target="_blank">Explorar ideas ↗</a></div>
+        </section>
+
+        <aside class="settings-panel" aria-label="Personalización del diseño">
+          <div class="settings-header"><div class="settings-eyebrow">TU ESPACIO CREATIVO <span>✳</span></div><h2>Hacelo <em>a tu gusto.</em></h2><p>Todos los detalles cuentan.</p></div>
+          <div class="tab-bar" role="tablist" aria-label="Herramientas de personalización">
+            <button type="button" class="tab active" data-tab="color" role="tab" aria-selected="true">Color</button>
+            <button type="button" class="tab" data-tab="art" role="tab" aria-selected="false">Nail art</button>
+            <button type="button" class="tab" data-tab="image" role="tab" aria-selected="false">Imagen</button>
+          </div>
+          <div class="selected-nail-row"><div><span class="form-label">EDITANDO</span><strong id="selectedNailName">Índice</strong></div><label class="toggle-row" for="applyAll"><input type="checkbox" id="applyAll" /><span class="switch"></span><span>Todas</span></label></div>
+
+          <div class="tab-panel active" id="panel-color" role="tabpanel">
+            <div class="field-section"><div class="field-head"><label class="form-label" for="colorPicker">COLOR DEL ESMALTE</label><span class="hex-label" id="hexLabel">#F1C0C6</span></div><div class="current-color"><span id="currentColorCircle"></span><span id="currentColorName">Rosa delicado</span><input type="color" id="colorPicker" value="#F1C0C6" aria-label="Elegir color personalizado" /></div><div class="swatch-grid" id="basePalette"></div></div>
+            <div class="field-section"><div class="field-head"><span class="form-label">FORMA DE LAS UÑAS</span></div><div class="shape-grid" id="shapeGrid"><button class="shape-option active" data-shape="almond"><span class="shape-icon almond"></span><span>Almendra</span></button><button class="shape-option" data-shape="oval"><span class="shape-icon oval"></span><span>Ovalada</span></button><button class="shape-option" data-shape="square"><span class="shape-icon square"></span><span>Cuadrada</span></button><button class="shape-option" data-shape="coffin"><span class="shape-icon coffin"></span><span>Coffin</span></button><button class="shape-option" data-shape="stiletto"><span class="shape-icon stiletto"></span><span>Stiletto</span></button></div></div>
+            <div class="field-section"><div class="field-head"><label class="form-label" for="lengthRange">LARGO</label><strong class="inline-value" id="lengthName">Medias</strong></div><input class="range" id="lengthRange" type="range" min="0" max="3" step="1" value="1" /><div class="range-labels"><span>Cortas</span><span>Medias</span><span>Largas</span><span>XL</span></div></div>
+            <div class="field-section"><div class="field-head"><span class="form-label">ACABADO</span></div><div class="finish-row" id="finishButtons"><button data-finish="glossy" class="finish active"><span class="finish-dot glossy"></span>Brillante</button><button data-finish="matte" class="finish"><span class="finish-dot matte"></span>Mate</button><button data-finish="chrome" class="finish"><span class="finish-dot chrome"></span>Chrome</button></div></div>
+            <div class="field-section last-section"><div class="field-head"><span class="form-label">TONO DE PIEL · VISTA PREVIA</span></div><div class="skin-row" id="skinPalette"></div></div>
+          </div>
+
+          <div class="tab-panel" id="panel-art" role="tabpanel" hidden>
+            <div class="field-section"><div class="field-head"><span class="form-label">DIBUJAR SOBRE LA UÑA</span></div><div class="art-tool-grid"><button class="art-tool active" data-tool="select"><span>↖</span>Elegir</button><button class="art-tool" data-tool="brush"><span>✎</span>Pincel</button><button class="art-tool" data-tool="dot"><span>●</span>Puntos</button><button class="art-tool" data-tool="sticker"><span>✿</span>Stickers</button><button class="art-tool" data-tool="eraser"><span>⌫</span>Borrar</button></div><p class="help-text" id="artToolHelp">Elegí una uña para personalizarla.</p></div>
+            <div class="field-section"><div class="field-head"><label class="form-label" for="artColor">COLOR DEL DETALLE</label><span class="hex-label" id="artHexLabel">#FFFFFF</span></div><div class="art-color-row"><div class="art-palette" id="artPalette"></div><input type="color" id="artColor" value="#FFFFFF" aria-label="Color del pincel o sticker" /></div><div class="size-row"><label for="brushSize">Tamaño de pincel</label><input class="range" type="range" id="brushSize" min="2" max="25" value="7" /><span id="brushSizeLabel">7</span></div></div>
+            <div class="field-section"><div class="field-head"><span class="form-label">STICKERS & DETALLES</span></div><div class="sticker-grid" id="stickerGrid"><button data-sticker="flower" title="Flor">✿</button><button data-sticker="heart" title="Corazón">♥</button><button data-sticker="star" title="Estrella">★</button><button data-sticker="bow" title="Moño">୨୧</button><button data-sticker="cherry" title="Cerezas">🍒</button><button data-sticker="sparkle" title="Destello">✧</button><button data-sticker="pearl" title="Perla">◉</button><button data-sticker="butterfly" title="Mariposa">🦋</button></div><p class="help-text">Seleccioná un sticker y tocá donde lo quieras colocar.</p></div>
+            <div class="field-section"><div class="field-head"><span class="form-label">EFECTOS AL INSTANTE</span></div><div class="effect-grid"><button id="frenchEffect" class="effect-button"><span>⌒</span><div><strong>French tip</strong><small>Puntas con color</small></div><span>＋</span></button><button id="auraEffect" class="effect-button"><span>◉</span><div><strong>Aura nails</strong><small>Degradé difuminado</small></div><span>＋</span></button><button id="glitterEffect" class="effect-button"><span>✧</span><div><strong>Glitter</strong><small>Destellos delicados</small></div><span>＋</span></button></div></div>
+            <button class="clear-art-button" id="clearArtBtn">⌫ Quitar decoraciones de la selección</button>
+          </div>
+
+          <div class="tab-panel" id="panel-image" role="tabpanel" hidden>
+            <div class="field-section"><div class="field-head"><span class="form-label">IMPORTAR TU INSPIRACIÓN</span></div><button id="uploadZone" type="button" class="upload-zone"><span class="upload-illustration">↥</span><strong>Subí una foto de referencia</strong><span>JPG, PNG o WebP · máximo 10 MB</span><span class="upload-link">Elegir imagen</span></button><input type="file" id="imageInput" accept="image/png,image/jpeg,image/webp" hidden /></div>
+            <div class="field-section" id="imageOptions" hidden><div class="field-head"><span class="form-label">TU IMAGEN</span></div><div class="reference-preview"><img id="referenceImage" alt="Imagen importada" /><div><strong id="referenceName">Imagen importada</strong><span>Lista para usar</span><button id="removeImage" type="button">Quitar imagen</button></div></div><div class="size-row"><label for="imageScale">Escala de textura</label><input class="range" type="range" id="imageScale" min="50" max="250" value="100" /><span id="imageScaleLabel">100%</span></div><div class="size-row"><label for="imageOpacity">Opacidad</label><input class="range" type="range" id="imageOpacity" min="10" max="100" value="85" /><span id="imageOpacityLabel">85%</span></div><button id="applyImageBtn" class="apply-image-btn" type="button">✧ Aplicar imagen sobre la uña</button><button id="clearImageBtn" class="clear-art-button" type="button">Quitar textura aplicada</button></div>
+            <div class="reference-note"><span>✳</span><div><strong>De Pinterest a tu diseño</strong><p>Encontrá una idea, guardá su imagen en tu dispositivo (si tenés permiso para usarla) y subila acá para verla como textura o referencia.</p></div></div>
+            <div class="pinterest-search"><label class="form-label" for="pinterestQuery">BUSCAR IDEAS EN PINTEREST</label><div><input id="pinterestQuery" placeholder="Ej: uñas almendra otoño" value="uñas aesthetic" /><button id="pinterestSearchBtn" title="Abrir búsqueda en Pinterest">↗</button></div><div class="search-tags"><button data-search="french tip nails">French</button><button data-search="coquette nails">Coquette</button><button data-search="aura nails">Aura</button><button data-search="chrome nails">Chrome</button></div></div>
+          </div>
+          <div class="settings-bottom"><span>♡</span><p>Hecho con amor, diseñado por vos.</p></div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="savedModal" hidden><div class="saved-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-top"><div><div class="eyebrow">TU COLECCIÓN PERSONAL</div><h2 id="modalTitle">Mis diseños <em>favoritos.</em></h2></div><button id="closeModal" class="modal-close" aria-label="Cerrar">×</button></div><div id="savedGallery" class="saved-gallery"></div><div class="modal-bottom">Los diseños se guardan en este navegador, sin crear cuenta.</div></div></div>
+<script>
+'use strict';
+(() => {
+  const $ = (q) => document.querySelector(q);
+  const $$ = (q) => [...document.querySelectorAll(q)];
+  const canvas = $('#nailCanvas'), ctx = canvas.getContext('2d');
+  const NAMES = ['Pulgar', 'Índice', 'Mayor', 'Anular', 'Meñique'];
+  const LENGTHS = [88, 121, 161, 196];
+  const LENGTH_NAMES = ['Cortas', 'Medias', 'Largas', 'Extra largas'];
+  const SKIN = ['#f9dfce', '#eac1a5', '#ce9676', '#a96950', '#764737', '#4e302b'];
+  const COLORS = [
+    ['#F2C8CC','Rosa delicado'],['#F6E5DE','Nude vainilla'],['#FEF9F2','Blanco leche'],['#DAB6A9','Nude rosado'],
+    ['#DDA3BF','Rosa empolvado'],['#BA668D','Frambuesa'],['#A93E50','Rojo cereza'],['#5D192F','Borgoña'],
+    ['#B8C9A7','Verde salvia'],['#7B9475','Matcha'],['#65728D','Azul lavanda'],['#C1AED5','Lila suave'],
+    ['#D0A77C','Caramelo'],['#7A5248','Chocolate'],['#393443','Midnight'],['#202126','Negro tinta']
+  ];
+  const ART_COLORS = ['#FFFFFF','#F8D5E5','#B66889','#D6355E','#F8CB62','#9BC1A5','#677EC6','#29242B'];
+  const PRESETS = [
+    {id:'milky',name:'Milky glazed',sub:'Perlado y luminoso',category:'brillos',tag:'Minimal chic'},
+    {id:'french',name:'French forever',sub:'El clásico reinventado',category:'delicados',tag:'Clásico'},
+    {id:'coquette',name:'Coquette bows',sub:'Lacitos y rosa suave',category:'arte',tag:'Cute aesthetic'},
+    {id:'cherry',name:'Cherry crush',sub:'Cerezas muy cute',category:'arte',tag:'Dulce'},
+    {id:'matcha',name:'Matcha garden',sub:'Verde y florecitas',category:'arte',tag:'Natural'},
+    {id:'aura',name:'Pink aura',sub:'Un efecto soñado',category:'brillos',tag:'Trending'},
+    {id:'midnight',name:'Starry night',sub:'Cielo de medianoche',category:'brillos',tag:'Cósmico'},
+    {id:'garden',name:'Tiny flowers',sub:'Flores delicadas',category:'delicados',tag:'Romántico'},
+    {id:'caramel',name:'Caramel swirl',sub:'Remolinos cálidos',category:'delicados',tag:'Neutro'},
+    {id:'mismatch',name:'Mix & match',sub:'Una uña, otra historia',category:'arte',tag:'2026 vibe'}
+  ];
+  const fresh = (base='#F2C8CC') => ({base,finish:'glossy',french:null,aura:null,glitter:false,decals:[],strokes:[],image:null});
+  const deco = (kind,x,y,color='#FFFFFF',size=1) => ({kind,x,y,color,size});
+  function makePreset(id) {
+    const nails = Array.from({length:5},()=>fresh());
+    nails.forEach((n,i)=>{
+      switch(id){
+        case 'milky': n.base=['#FDF9F4','#FAF4EF','#F7E8E4','#FCF7EE','#F6E2E6'][i];n.finish='chrome';break;
+        case 'french':n.base='#F5D6CF';n.french={color:i===3?'#EAC0D1':'#FFFCF8'};break;
+        case 'coquette':n.base=['#F0BFCC','#F9DDE2','#F3C1CD','#F6D1D8','#EFBBC7'][i];n.decals.push(deco('bow',.5,i%2?.42:.52,'#FFF8F8',i===2?1.55:1.25));if(i===1||i===4)n.decals.push(deco('sparkle',.28,.68,'#FFFFFF',.8));break;
+        case 'cherry':n.base=i%2?'#FCE9E4':'#F7E1DF';n.decals.push(deco('cherry',.52,.45,'#BB2B4C',1.4));if(i%2===0){n.decals.push(deco('dot',.25,.66,'#C54D64',.65),deco('dot',.75,.77,'#C54D64',.65))}break;
+        case 'matcha':n.base=['#9AAE88','#E6E9D7','#BAC9A0','#F1EAD9','#8FA782'][i];if(i===1||i===3)n.decals.push(deco('flower',.55,.48,'#FFF9DF',1.55));else n.decals.push(deco('dot',.54,.61,'#F7EAD1',1));break;
+        case 'aura':n.base=i%2?'#F6C7D7':'#F4D5D9';n.aura={color:i%2?'#AF75B4':'#D85891'};n.decals.push(deco('sparkle',.73,.3,'#FFFFFF',.7));break;
+        case 'midnight':n.base=['#272A43','#343354','#29263D','#41405C','#272338'][i];n.finish='chrome';n.glitter=true;n.decals.push(deco('star',.5,.43,'#F5DFBE',1.15));break;
+        case 'garden':n.base=['#F8E8EA','#F6EDE5','#F2DBE4','#F7E4D9','#F8EFEA'][i];n.decals.push(deco('flower',.48,.35,'#FFFFFF',1.4),deco('flower',.66,.68,'#F1A5BA',.83));break;
+        case 'caramel':n.base=['#A97C68','#E4BCA3','#B8866E','#F0D7BC','#8B5F55'][i];n.decals.push(deco('swirl',.51,.52,'#FFF1DD',1.35));break;
+        case 'mismatch':n.base=['#EFADC0','#D0C6E9','#A6C0AD','#D17B88','#E6B6B0'][i];if(i%2===0)n.french={color:['#9B86B9','#DADBE8','#526A62','#AC4774','#E3E8A0'][i]};else n.decals.push(deco(i===1?'star':'flower',.52,.44,'#FFF8E9',1.6));break;
+      }
+    });
+    return nails;
+  }
+  const INITIAL = {shape:'almond',length:1,skin:1,selected:1,tab:'color',tool:'select',artColor:'#FFFFFF',brushSize:7,sticker:'flower',applyAll:false,preset:'coquette',nails:makePreset('coquette'),reference:null,imageScale:100,imageOpacity:85};
+  const STORAGE='naile-studio-v2', SAVED='naile-saved-v2';
+  let state={...INITIAL}, view=innerWidth<=520?'detail':'hand', undo=[], redo=[], strokesActive=false, activeStroke=null, saved=[], saveTimer=null, toastTimer=null;
+  let canvasW=1000,canvasH=600;
+  const imageCache=new Map();
+  const clone = (o) => JSON.parse(JSON.stringify(o));
+  const clamp=(a,min,max)=>Math.max(min,Math.min(max,a));
+  const safeParse = (s) => {try{return JSON.parse(s)}catch{return null}};
+  try {
+    const stored=safeParse(localStorage.getItem(STORAGE));
+    if(stored && Array.isArray(stored.nails) && stored.nails.length===5){state={...clone(INITIAL),...stored,tab:'color',tool:'select',applyAll:false,selected:clamp(stored.selected||0,0,4)};}
+    const storedSaved=safeParse(localStorage.getItem(SAVED));if(Array.isArray(storedSaved))saved=storedSaved;
+  }catch(e){console.warn('No se pudo leer el almacenamiento local.',e)}
+  function toast(message){const e=$('#toast');e.textContent=message;e.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('visible'),2800)}
+  function persist(){clearTimeout(saveTimer);saveTimer=setTimeout(()=>{try{localStorage.setItem(STORAGE,JSON.stringify(state))}catch(e){console.warn(e);toast('No hay espacio para guardar automáticamente; descargá el PNG.')}},300)}
+  function pushUndo(){undo.push(JSON.stringify(state));if(undo.length>45)undo.shift();redo=[]}
+  function transact(fn,clearPreset=true){pushUndo();fn();if(clearPreset)state.preset=null;refresh();persist()}
+  function doUndo(){if(!undo.length)return;redo.push(JSON.stringify(state));state=JSON.parse(undo.pop());refresh();persist()}
+  function doRedo(){if(!redo.length)return;undo.push(JSON.stringify(state));state=JSON.parse(redo.pop());refresh();persist()}
+  function affected(){return state.applyAll?[0,1,2,3,4]:[state.selected]}
+  function shade(hex,pct){if(!/^#[\da-f]{6}$/i.test(hex))return hex;const r=Number.parseInt(hex.slice(1),16);const p=pct>=0?255:0;const t=Math.abs(pct);return '#'+[16,8,0].map(s=>Math.round(((r>>s)&255)*(1-t)+p*t).toString(16).padStart(2,'0')).join('')}
+  const rgba=(hex,opacity)=>{const h=hex.replace('#','');return `rgba(${parseInt(h.substring(0,2),16)},${parseInt(h.substring(2,4),16)},${parseInt(h.substring(4,6),16)},${opacity})`};
+  function nailPath(cx,y,w,h,shape){
+    const p=new Path2D(),b=y+h,l=cx-w/2,r=cx+w/2,baseR=Math.min(11,w*.17);
+    if(shape==='almond') {p.moveTo(cx,y);p.bezierCurveTo(cx+w*.21,y+h*.08,r,y+h*.25,r,y+h*.43)}
+    else if(shape==='stiletto'){p.moveTo(cx,y);p.lineTo(r,y+h*.48)}
+    else if(shape==='coffin'){p.moveTo(cx-w*.28,y+2);p.lineTo(cx+w*.28,y+2);p.quadraticCurveTo(r,y+h*.27,r,y+h*.47)}
+    else if(shape==='square'){p.moveTo(l+baseR,y);p.lineTo(r-baseR,y);p.quadraticCurveTo(r,y,r,y+baseR);p.lineTo(r,y+h*.46)}
+    else {p.moveTo(cx,y);p.bezierCurveTo(cx+w*.32,y,cx+w*.5,y+h*.13,r,y+h*.35)}
+    p.lineTo(r-w*.02,b-baseR);p.quadraticCurveTo(r-w*.05,b,cx,b+1.5);p.quadraticCurveTo(l+w*.05,b,l+w*.02,b-baseR);
+    if(shape==='almond'){p.lineTo(l,y+h*.43);p.bezierCurveTo(l,y+h*.25,cx-w*.21,y+h*.08,cx,y)}
+    else if(shape==='stiletto'){p.lineTo(l,y+h*.48);p.lineTo(cx,y)}
+    else if(shape==='coffin'){p.lineTo(l,y+h*.47);p.quadraticCurveTo(l,y+h*.27,cx-w*.28,y+2)}
+    else if(shape==='square'){p.lineTo(l,y+baseR);p.quadraticCurveTo(l,y,l+baseR,y)}
+    else {p.lineTo(l,y+h*.35);p.bezierCurveTo(l,y+h*.13,cx-w*.32,y,cx,y)}
+    p.closePath();return p;
+  }
+  function drawFinger(cx,top,w,h,skin){
+    ctx.save();const fw=w*1.26,l=cx-fw/2,r=cx+fw/2;
+    const p=new Path2D();p.moveTo(l,canvasH+35);p.lineTo(l,top+fw*.58);p.bezierCurveTo(l,top-fw*.2,cx-fw*.38,top-fw*.32,cx,top-fw*.30);p.bezierCurveTo(cx+fw*.4,top-fw*.28,r,top-fw*.05,r,top+fw*.58);p.lineTo(r,canvasH+35);p.closePath();
+    const g=ctx.createLinearGradient(l,0,r,0);g.addColorStop(0,shade(skin,-.12));g.addColorStop(.2,skin);g.addColorStop(.64,shade(skin,.10));g.addColorStop(1,shade(skin,-.16));ctx.fillStyle=g;ctx.fill(p);ctx.strokeStyle=rgba(shade(skin,-.22),.45);ctx.lineWidth=1.5;ctx.stroke(p);
+    ctx.beginPath();ctx.moveTo(l+fw*.2,top+fw*.4);ctx.lineTo(l+fw*.2,canvasH+30);ctx.lineWidth=fw*.07;ctx.strokeStyle=rgba('#FFFFFF',.13);ctx.stroke();
+    if(h>110){ctx.strokeStyle=rgba(shade(skin,-.25),.17);ctx.lineWidth=1.4;const y=top+h*.95+85;[-8,4,14].forEach((dx,idx)=>{ctx.beginPath();ctx.moveTo(cx-14+dx*.2,y+idx*5);ctx.quadraticCurveTo(cx,y+idx*5-2,cx+14+dx*.2,y+idx*5);ctx.stroke()})}
+    ctx.restore();
+  }
+  function sticker(ctx,kind,x,y,color,size){
+    ctx.save();ctx.translate(x,y);ctx.scale(size,size);ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle=color;ctx.fillStyle=color;
+    if(kind==='dot'||kind==='pearl'){if(kind==='pearl'){const g=ctx.createRadialGradient(-3,-4,1,0,0,10);g.addColorStop(0,'#fff');g.addColorStop(.42,color);g.addColorStop(1,shade(color,-.22));ctx.fillStyle=g;}ctx.beginPath();ctx.arc(0,0,kind==='dot'?3.8:7,0,Math.PI*2);ctx.fill()}
+    else if(kind==='star'||kind==='sparkle'){const rays=kind==='sparkle'?4:5,outer=kind==='sparkle'?13:12,inner=kind==='sparkle'?2:5;ctx.beginPath();for(let i=0;i<rays*2;i++){const a=i*Math.PI/rays-Math.PI/2,r=i%2?inner:outer;if(i===0)ctx.moveTo(Math.cos(a)*r,Math.sin(a)*r);else ctx.lineTo(Math.cos(a)*r,Math.sin(a)*r)}ctx.closePath();ctx.fill();if(kind==='sparkle'){ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(-17,5);ctx.lineTo(-12,5);ctx.moveTo(14,-7);ctx.lineTo(18,-7);ctx.stroke()}}
+    else if(kind==='heart'){ctx.beginPath();ctx.moveTo(0,12);ctx.bezierCurveTo(-6,7,-14,0,-11,-7);ctx.bezierCurveTo(-9,-13,-2,-12,0,-6);ctx.bezierCurveTo(5,-14,13,-12,12,-4);ctx.bezierCurveTo(11,3,4,9,0,12);ctx.fill()}
+    else if(kind==='flower'){for(let i=0;i<5;i++){const a=i*Math.PI*2/5-Math.PI/2;ctx.beginPath();ctx.ellipse(Math.cos(a)*6.9,Math.sin(a)*6.9,5.9,7.7,a,0,Math.PI*2);ctx.fill()}ctx.beginPath();ctx.fillStyle='#EDC05D';ctx.arc(0,0,4.1,0,Math.PI*2);ctx.fill()}
+    else if(kind==='bow'){ctx.lineWidth=2.1;ctx.beginPath();ctx.moveTo(0,1);ctx.bezierCurveTo(-8,-15,-18,-10,-16,-2);ctx.bezierCurveTo(-15,5,-7,4,0,1);ctx.bezierCurveTo(8,-12,20,-10,17,-1);ctx.bezierCurveTo(14,6,7,5,0,1);ctx.fill();ctx.beginPath();ctx.moveTo(-1,3);ctx.lineTo(-8,17);ctx.lineTo(0,12);ctx.lineTo(8,17);ctx.lineTo(2,3);ctx.fill();ctx.beginPath();ctx.fillStyle=shade(color,-.13);ctx.arc(0,1,3.3,0,Math.PI*2);ctx.fill()}
+    else if(kind==='cherry'){ctx.strokeStyle='#597C4A';ctx.lineWidth=2.2;ctx.beginPath();ctx.moveTo(-5,2);ctx.quadraticCurveTo(-3,-8,3,-12);ctx.quadraticCurveTo(6,-6,8,2);ctx.stroke();ctx.fillStyle='#7F9B58';ctx.beginPath();ctx.ellipse(6,-13,6,2.6,-.55,0,Math.PI*2);ctx.fill();ctx.fillStyle=color;ctx.beginPath();ctx.arc(-7,7,6.8,0,Math.PI*2);ctx.arc(9,7,6.5,0,Math.PI*2);ctx.fill();ctx.fillStyle='#FFFFFF88';ctx.beginPath();ctx.ellipse(-9,4,2,1.4,-.6,0,Math.PI*2);ctx.fill()}
+    else if(kind==='swirl'){ctx.strokeStyle=color;ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(-18,-25);ctx.bezierCurveTo(26,-14,-26,-2,16,8);ctx.bezierCurveTo(34,14,-9,22,15,30);ctx.stroke()}
+    else if(kind==='butterfly'){ctx.fillStyle=color;for(const side of [-1,1]){ctx.beginPath();ctx.ellipse(side*7,-5,6,9,side*.55,0,2*Math.PI);ctx.fill();ctx.beginPath();ctx.ellipse(side*6,7,4,6,side*-.6,0,2*Math.PI);ctx.fill()}ctx.strokeStyle=shade(color,-.35);ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,-13);ctx.lineTo(0,13);ctx.stroke()}
+    ctx.restore();
+  }
+  const imageFor=(src)=>{if(!src)return null;if(imageCache.has(src))return imageCache.get(src);const image=new Image();imageCache.set(src,image);image.onload=()=>render();image.onerror=()=>imageCache.delete(src);image.src=src;return image};
+  function drawNail(cx,y,w,h,nail,shape,highlight=false){
+    ctx.save();const path=nailPath(cx,y,w,h,shape);
+    if(highlight){ctx.shadowColor='#bf6395';ctx.shadowBlur=23;ctx.strokeStyle='#d58aac';ctx.lineWidth=5;ctx.stroke(path);ctx.shadowBlur=0;}
+    ctx.shadowColor='rgba(82,39,65,.20)';ctx.shadowBlur=10;ctx.shadowOffsetY=5;ctx.fillStyle=shade(nail.base,-.08);ctx.fill(path);ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.clip(path);const g=ctx.createLinearGradient(cx-w/2,y,cx+w/2,y+h);g.addColorStop(0,shade(nail.base,.13));g.addColorStop(.43,nail.base);g.addColorStop(1,shade(nail.base,-.11));ctx.fillStyle=g;ctx.fillRect(cx-w/2-2,y-2,w+4,h+5);
+    if(nail.finish==='chrome'){const chrome=ctx.createLinearGradient(cx-w/2,y,cx+w/2,y+h*.15);chrome.addColorStop(0,'#ffffff12');chrome.addColorStop(.24,'#fffbfa91');chrome.addColorStop(.42,'#ffffff05');chrome.addColorStop(.73,'#dfd2ec70');chrome.addColorStop(1,'#ffffff8c');ctx.fillStyle=chrome;ctx.fillRect(cx-w/2,y,w,h)}
+    if(nail.aura){const a=ctx.createRadialGradient(cx,y+h*.5,0,cx,y+h*.52,w*.85);a.addColorStop(0,rgba(nail.aura.color,.9));a.addColorStop(.44,rgba(nail.aura.color,.55));a.addColorStop(1,rgba(nail.aura.color,0));ctx.fillStyle=a;ctx.fillRect(cx-w/2,y,w,h)}
+    if(nail.french){ctx.fillStyle=nail.french.color;ctx.beginPath();ctx.moveTo(cx-w,y-5);ctx.lineTo(cx+w,y-5);ctx.lineTo(cx+w,y+h*.21);ctx.lineTo(cx+w*.5,y+h*.20);ctx.quadraticCurveTo(cx,y+h*.37,cx-w*.5,y+h*.20);ctx.lineTo(cx-w,y+h*.21);ctx.closePath();ctx.fill()}
+    if(nail.image?.src){const img=imageFor(nail.image.src);if(img?.complete&&img.naturalWidth){ctx.save();ctx.globalAlpha=clamp(nail.image.opacity??.85,0,1);const zoom=(nail.image.scale||100)/100;const cover=Math.max(w/img.naturalWidth,h/img.naturalHeight)*zoom;const iw=img.naturalWidth*cover,ih=img.naturalHeight*cover;ctx.drawImage(img,cx-iw/2,y+h/2-ih/2,iw,ih);ctx.restore()}}
+    if(nail.glitter){for(let i=0;i<42;i++){let n=Math.abs(Math.sin((i+1)*16.392+cx*.004)*43758.54),m=Math.abs(Math.sin((i+2)*32.428+y*.019)*12638.23);n=n%1;m=m%1;ctx.beginPath();ctx.arc(cx-w*.49+n*w,y+m*h,(i%7===0?1.6:.65)*(w/74),0,Math.PI*2);ctx.fillStyle=i%3===0?'#FFF0C3':'#FFFFFFAA';ctx.fill()}}
+    (nail.strokes||[]).forEach(s=>{const points=s.points||[];if(!points.length)return;ctx.save();ctx.strokeStyle=s.color;ctx.fillStyle=s.color;ctx.lineWidth=s.size*(w/74);ctx.lineJoin='round';ctx.lineCap='round';ctx.beginPath();points.forEach((pt,i)=>{const px=cx-w/2+pt[0]*w,py=y+pt[1]*h;if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)});if(points.length===1){ctx.arc(cx-w/2+points[0][0]*w,y+points[0][1]*h,ctx.lineWidth*.5,0,Math.PI*2);ctx.fill()}else ctx.stroke();ctx.restore()});
+    (nail.decals||[]).forEach(d=>sticker(ctx,d.kind,cx-w/2+d.x*w,y+d.y*h,d.color,(d.size||1)*(w/74)));
+    if(nail.finish!=='matte'){
+      ctx.save();ctx.globalAlpha=nail.finish==='chrome'?.63:.32;const shimmer=ctx.createLinearGradient(cx-w*.36,y,cx-w*.07,y);shimmer.addColorStop(0,'#fff0');shimmer.addColorStop(.6,'#ffffff');shimmer.addColorStop(1,'#fff0');ctx.fillStyle=shimmer;ctx.beginPath();ctx.ellipse(cx-w*.24,y+h*.51,w*.095,h*.36,-.04,0,2*Math.PI);ctx.fill();ctx.globalAlpha=.17;ctx.fillStyle='#fff';ctx.beginPath();ctx.ellipse(cx+w*.29,y+h*.45,w*.04,h*.27,0,0,2*Math.PI);ctx.fill();ctx.restore();
+    }
+    ctx.restore();ctx.save();ctx.lineWidth=highlight?2.5:1.4;ctx.strokeStyle=highlight?'#C16E91':rgba(shade(nail.base,-.27),.44);ctx.stroke(path);ctx.restore();return path;
+  }
+  function getNailRects(){
+    if(view==='detail'){const h=LENGTHS[state.length]*2.0;return [{index:state.selected,cx:350,y:465-h,w:155,h}];}
+    const x=[137,307,495,685,866],dy=[36,15,-1,13,40],w=[92,79,82,76,69];
+    return x.map((cx,index)=>{const h=LENGTHS[state.length]*(index===0?.84:index===4?.88:1);const base=385+dy[index];return {index,cx,y:base-h,w:w[index],h}});
+  }
+  function background(w,h){
+    const grad=ctx.createLinearGradient(0,0,w,h);grad.addColorStop(0,'#fff6f4');grad.addColorStop(.48,'#f7eae9');grad.addColorStop(1,'#f1e4e7');ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);
+    const blobs=[[w*.19,h*.13,195,'#ffffff80'],[w*.85,h*.63,260,'#e9c6d85d'],[w*.56,h*.17,270,'#fffefe7a']];for(const [x,y,r,c] of blobs){const g=ctx.createRadialGradient(x,y,3,x,y,r);g.addColorStop(0,c);g.addColorStop(1,'#ffffff00');ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,2*Math.PI);ctx.fill()}
+    ctx.strokeStyle='#d7adba30';ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(w*.5,h*1.1,w*.57,h*.27,0,Math.PI,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.ellipse(w*.5,h*1.08,w*.47,h*.22,0,Math.PI,Math.PI*2);ctx.stroke();
+    [[.07,.24],[.88,.18],[.94,.70],[.24,.84]].forEach(([x,y],i)=>{ctx.save();ctx.translate(w*x,h*y);ctx.strokeStyle='#d7a3b4';ctx.lineWidth=1.4;ctx.beginPath();ctx.moveTo(0,-8);ctx.lineTo(0,8);ctx.moveTo(-8,0);ctx.lineTo(8,0);ctx.moveTo(-4,-4);ctx.lineTo(4,4);ctx.moveTo(4,-4);ctx.lineTo(-4,4);ctx.stroke();ctx.restore()})
+  }
+  function render(){
+    canvasW=view==='hand'?1000:700;canvasH=view==='hand'?600:620;
+    const dpr=Math.min(window.devicePixelRatio||1,2);if(canvas.width!==Math.round(canvasW*dpr)||canvas.height!==Math.round(canvasH*dpr)){canvas.width=Math.round(canvasW*dpr);canvas.height=Math.round(canvasH*dpr)}
+    canvas.style.aspectRatio=`${canvasW} / ${canvasH}`;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,canvasW,canvasH);background(canvasW,canvasH);
+    const rects=getNailRects();
+    ctx.save();ctx.shadowColor='#9a647451';ctx.shadowBlur=42;ctx.shadowOffsetY=15;rects.forEach(r=>drawFinger(r.cx,r.y+r.h*.54,r.w,r.h,SKIN[state.skin]));ctx.restore();
+    rects.forEach(r=>drawNail(r.cx,r.y,r.w,r.h,state.nails[r.index],state.shape,r.index===state.selected));
+    if(view==='detail'){
+      ctx.fillStyle='#7d6873';ctx.font='700 12px DM Sans, sans-serif';ctx.textAlign='center';ctx.fillText(NAMES[state.selected].toUpperCase(),350,578);
+      ctx.fillStyle='#ab899c';ctx.font='12px DM Sans, sans-serif';ctx.fillText('Vista detalle · Tocá para colocar detalles',350,596);
+    }
+  }
+  function renderThumb(c,id,portrait=false,nailsOverride=null,shapeOverride=null,lengthOverride=null){
+    const cctx=c.getContext('2d'),dpr=Math.min(window.devicePixelRatio||1,2),w=portrait?210:86,h=portrait?132:66;
+    c.width=w*dpr;c.height=h*dpr;cctx.setTransform(dpr,0,0,dpr,0,0);
+    cctx.fillStyle='#f7e9ec';cctx.fillRect(0,0,w,h);
+    const oldCtx=ctx;
+    // Miniaturas independientes: el dibujo usa el mismo renderizador con un contexto temporal.
+    // Se intercambia el contexto vía función propia para evitar efectos secundarios del editor.
+    const nails=nailsOverride||makePreset(id);
+    const shape=shapeOverride||'almond';
+    [0,1,2].forEach((ix)=>{
+      const nail=nails[portrait?[0,2,4][ix]:[1,2,3][ix]];
+      const x=portrait?51+ix*54:18+ix*25, nw=portrait?34:17,ny=portrait?13:9,nh=portrait?104:50;
+      miniNail(cctx,x,ny,nw,nh,nail,shape);
+    });
+  }
+  function miniNail(c,cx,y,w,h,nail,shape){
+    const p=nailPath(cx,y,w,h,shape);c.save();c.fillStyle=nail.base;c.shadowColor='#8d4b5940';c.shadowBlur=3;c.shadowOffsetY=2;c.fill(p);c.shadowBlur=0;c.shadowOffsetY=0;c.clip(p);
+    const g=c.createLinearGradient(cx-w/2,y,cx+w/2,y+h);g.addColorStop(0,shade(nail.base,.22));g.addColorStop(.5,nail.base);g.addColorStop(1,shade(nail.base,-.12));c.fillStyle=g;c.fillRect(cx-w/2,y,w,h);
+    if(nail.aura){const ga=c.createRadialGradient(cx,y+h*.47,0,cx,y+h*.47,w*.7);ga.addColorStop(0,rgba(nail.aura.color,.9));ga.addColorStop(1,rgba(nail.aura.color,0));c.fillStyle=ga;c.fillRect(cx-w/2,y,w,h)}
+    if(nail.french){c.fillStyle=nail.french.color;c.beginPath();c.moveTo(cx-w,y-2);c.lineTo(cx+w,y-2);c.lineTo(cx+w,y+h*.21);c.quadraticCurveTo(cx,y+h*.36,cx-w,y+h*.21);c.closePath();c.fill()}
+    if(nail.finish==='chrome'){c.fillStyle='#ffffff65';c.fillRect(cx-w*.4,y,w*.17,h)}
+    if(nail.image?.src){const img=imageFor(nail.image.src);if(img?.complete&&img.naturalWidth){c.save();c.globalAlpha=clamp(nail.image.opacity??.85,0,1);const zoom=(nail.image.scale||100)/100;const cover=Math.max(w/img.naturalWidth,h/img.naturalHeight)*zoom,iw=img.naturalWidth*cover,ih=img.naturalHeight*cover;c.drawImage(img,cx-iw/2,y+h/2-ih/2,iw,ih);c.restore()}}
+    (nail.strokes||[]).forEach(s=>{if(!(s.points||[]).length)return;c.save();c.strokeStyle=s.color;c.fillStyle=s.color;c.lineWidth=s.size*w/74;c.lineCap='round';c.lineJoin='round';c.beginPath();s.points.forEach((pt,i)=>{const xx=cx-w/2+pt[0]*w,yy=y+pt[1]*h;i?c.lineTo(xx,yy):c.moveTo(xx,yy)});if(s.points.length===1){c.arc(cx-w/2+s.points[0][0]*w,y+s.points[0][1]*h,c.lineWidth/2,0,Math.PI*2);c.fill()}else c.stroke();c.restore()});
+    if(nail.glitter)for(let i=0;i<19;i++){const px=(Math.sin(i*32.2+5)*12345)%1,py=(Math.cos(i*12.3+5)*12345)%1;c.fillStyle='#fff9dba9';c.fillRect(cx-w/2+Math.abs(px)*w,y+Math.abs(py)*h,1,1)}
+    (nail.decals||[]).forEach(d=>{c.save();c.translate(cx-w/2+d.x*w,y+d.y*h);c.scale(w/74*(d.size||1),w/74*(d.size||1));const col=d.color;c.fillStyle=col;c.strokeStyle=col;
+      if(d.kind==='star'||d.kind==='sparkle'){c.beginPath();for(let j=0;j<10;j++){const a=j*Math.PI/5-Math.PI/2,r=j%2?4:12;j?c.lineTo(Math.cos(a)*r,Math.sin(a)*r):c.moveTo(Math.cos(a)*r,Math.sin(a)*r)}c.fill()}
+      else if(d.kind==='flower'){for(let j=0;j<5;j++){const a=j*Math.PI*2/5;c.beginPath();c.arc(Math.cos(a)*7,Math.sin(a)*7,6,0,Math.PI*2);c.fill()}c.fillStyle='#e8be65';c.beginPath();c.arc(0,0,4,0,Math.PI*2);c.fill()}
+      else if(d.kind==='bow'){c.beginPath();c.ellipse(-7,0,8,5,.35,0,Math.PI*2);c.ellipse(7,0,8,5,-.35,0,Math.PI*2);c.fill();c.fillRect(-2,-2,4,4)}
+      else if(d.kind==='cherry'){c.beginPath();c.arc(-6,4,7,0,Math.PI*2);c.arc(7,4,7,0,Math.PI*2);c.fill()}
+      else if(d.kind==='swirl'){c.lineWidth=4;c.beginPath();c.moveTo(-14,-18);c.bezierCurveTo(20,-8,-18,8,17,18);c.stroke()}
+      else {c.beginPath();c.arc(0,0,5,0,Math.PI*2);c.fill()};c.restore()});
+    c.restore();c.strokeStyle=rgba(shade(nail.base,-.2),.6);c.lineWidth=.8;c.stroke(p);
+  }
+  function fillPresets(filter='todos'){
+    $('#presetList').innerHTML='';PRESETS.filter(p=>filter==='todos'||p.category===filter).forEach(p=>{
+      const btn=document.createElement('button');btn.type='button';btn.className='preset-card'+(state.preset===p.id?' active':'');btn.innerHTML=`<canvas class="preset-thumb" aria-hidden="true"></canvas><span class="preset-details"><strong class="preset-name">${p.name}</strong><span class="preset-sub">${p.sub}</span><span class="tag">${p.tag}</span></span>`;
+      btn.onclick=()=>{transact(()=>{state.nails=makePreset(p.id);state.preset=p.id},false);toast('Look «'+p.name+'» aplicado ✨')};$('#presetList').appendChild(btn);renderThumb(btn.querySelector('canvas'),p.id)
+    });
+  }
+  function updateUI(){
+    $('#selectedNailName').textContent=NAMES[state.selected];$('#applyAll').checked=state.applyAll;
+    $$('.tab').forEach(b=>{const selected=b.dataset.tab===state.tab;b.classList.toggle('active',selected);b.setAttribute('aria-selected',selected)});
+    $$('.tab-panel').forEach(el=>{const selected=el.id==='panel-'+state.tab;el.classList.toggle('active',selected);el.hidden=!selected});
+    $$('.shape-option').forEach(b=>b.classList.toggle('active',b.dataset.shape===state.shape));
+    $('#lengthRange').value=state.length;$('#lengthName').textContent=LENGTH_NAMES[state.length];
+    $('#currentColorCircle').style.background=state.nails[state.selected].base;$('#hexLabel').textContent=state.nails[state.selected].base.toUpperCase();$('#colorPicker').value=state.nails[state.selected].base;
+    $('#currentColorName').textContent=COLORS.find(c=>c[0].toLowerCase()===state.nails[state.selected].base.toLowerCase())?.[1]||'Color personalizado';
+    $('#basePalette').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.color.toLowerCase()===state.nails[state.selected].base.toLowerCase()));
+    $$('#finishButtons .finish').forEach(b=>b.classList.toggle('active',b.dataset.finish===state.nails[state.selected].finish));
+    $$('#skinPalette button').forEach(b=>b.classList.toggle('active',+b.dataset.skin===state.skin));
+    $$('.art-tool,.quick-tool').forEach(b=>b.classList.toggle('active',b.dataset.tool===state.tool));
+    $$('#stickerGrid button').forEach(b=>b.classList.toggle('active',b.dataset.sticker===state.sticker));
+    $('#artColor').value=state.artColor;$('#artHexLabel').textContent=state.artColor.toUpperCase();
+    $$('#artPalette button').forEach(b=>b.classList.toggle('active',b.dataset.color.toLowerCase()===state.artColor.toLowerCase()));
+    $('#brushSize').value=state.brushSize;$('#brushSizeLabel').textContent=state.brushSize;
+    $('#imageScale').value=state.imageScale;$('#imageOpacity').value=state.imageOpacity;$('#imageScaleLabel').textContent=state.imageScale+'%';$('#imageOpacityLabel').textContent=state.imageOpacity+'%';
+    $('#imageOptions').hidden=!state.reference;
+    if(state.reference){$('#referenceImage').src=state.reference.src;$('#referenceName').textContent=state.reference.name}
+    $('#savedCount').textContent=saved.length;
+    $('#undoBtn').disabled=!undo.length;$('#redoBtn').disabled=!redo.length;
+    $$('.preset-card').forEach(b=>b.classList.remove('active'));if(state.preset){const idx=PRESETS.findIndex(p=>p.id===state.preset);if(idx>=0){const visible=[...$('#presetList').children];visible.forEach(b=>{if(b.querySelector('.preset-name')?.textContent===PRESETS[idx].name)b.classList.add('active')})}}
+    $$('#fingerKey .finger-button').forEach(b=>b.classList.toggle('active',+b.dataset.finger===state.selected));
+    $('#viewText').textContent=view==='hand'?'Detalle':'Set completo';
+    $('#canvasHint').textContent=state.tool==='brush'?'✎ Dibujá con el dedo o el mouse':state.tool==='sticker'?'✿ Tocá para colocar un sticker':state.tool==='dot'?'● Tocá para poner puntos':state.tool==='eraser'?'⌫ Tocá un adorno para borrarlo':'✦ Tocá una uña para editarla';
+  }
+  function refresh(){render();updateUI()}
+  function selectTool(t){state.tool=t;if(t==='sticker'&&state.tab!=='art')state.tab='art';$('#creativeTip').textContent=t==='brush'?'Dibujá directamente sobre la uña. Usá Deshacer si querés probar otra cosa.':t==='sticker'?'Elegí un sticker en Nail art y tocá la uña para colocarlo.':'Hacé clic en una uña y personalizala. Activá «Todas» para editar el set completo.';updateUI();persist()}
+  function initControls(){
+    $('#basePalette').innerHTML='';COLORS.forEach(([color,name])=>{const btn=document.createElement('button');btn.className='swatch';btn.dataset.color=color;btn.style.background=color;btn.title=name;btn.setAttribute('aria-label',name);btn.onclick=()=>transact(()=>affected().forEach(i=>state.nails[i].base=color));$('#basePalette').appendChild(btn)});
+    ART_COLORS.forEach(color=>{const btn=document.createElement('button');btn.className='art-swatch';btn.dataset.color=color;btn.style.background=color;btn.title=color;btn.setAttribute('aria-label',color);btn.onclick=()=>{state.artColor=color;updateUI();persist()};$('#artPalette').appendChild(btn)});
+    SKIN.forEach((color,i)=>{const btn=document.createElement('button');btn.className='skin-swatch';btn.style.background=color;btn.dataset.skin=i;btn.title='Tono de piel '+(i+1);btn.setAttribute('aria-label',btn.title);btn.onclick=()=>transact(()=>state.skin=i);$('#skinPalette').appendChild(btn)});
+    $('#fingerKey').innerHTML=NAMES.map((n,i)=>`<button type="button" class="finger-button" data-finger="${i}">${n}</button>`).join('');
+    $$('#fingerKey button').forEach(b=>b.onclick=()=>{state.selected=+b.dataset.finger;refresh();persist()});
+    $$('.filter-chip').forEach(b=>b.onclick=()=>{$$('.filter-chip').forEach(c=>c.classList.remove('selected'));b.classList.add('selected');fillPresets(b.dataset.filter);updateUI()});
+    $$('.tab').forEach(b=>b.onclick=()=>{state.tab=b.dataset.tab;updateUI()});
+    $$('.shape-option').forEach(b=>b.onclick=()=>transact(()=>state.shape=b.dataset.shape));
+    $('#lengthRange').addEventListener('change',e=>transact(()=>state.length=+e.target.value));
+    $('#lengthRange').addEventListener('input',e=>{$('#lengthName').textContent=LENGTH_NAMES[+e.target.value]});
+    $$('#finishButtons button').forEach(b=>b.onclick=()=>transact(()=>affected().forEach(i=>state.nails[i].finish=b.dataset.finish)));
+    $('#colorPicker').oninput=e=>{if(/^#[0-9a-f]{6}$/i.test(e.target.value))transact(()=>affected().forEach(i=>state.nails[i].base=e.target.value))};
+    $('#artColor').oninput=e=>{state.artColor=e.target.value;updateUI();persist()};
+    $('#brushSize').oninput=e=>{state.brushSize=+e.target.value;$('#brushSizeLabel').textContent=state.brushSize;persist()};
+    $('#applyAll').onchange=e=>{state.applyAll=e.target.checked;updateUI();persist()};
+    $$('.art-tool,.quick-tool').forEach(b=>b.onclick=()=>selectTool(b.dataset.tool));
+    $$('#stickerGrid button').forEach(b=>b.onclick=()=>{state.sticker=b.dataset.sticker;selectTool('sticker')});
+    $('#frenchEffect').onclick=()=>transact(()=>affected().forEach(i=>{const n=state.nails[i];n.french=n.french?null:{color:state.artColor}}));
+    $('#auraEffect').onclick=()=>transact(()=>affected().forEach(i=>{const n=state.nails[i];n.aura=n.aura?null:{color:state.artColor}}));
+    $('#glitterEffect').onclick=()=>transact(()=>affected().forEach(i=>state.nails[i].glitter=!state.nails[i].glitter));
+    $('#clearArtBtn').onclick=()=>transact(()=>affected().forEach(i=>{const n=state.nails[i];n.decals=[];n.strokes=[];n.french=null;n.aura=null;n.glitter=false}));
+    $('#undoBtn').onclick=doUndo;$('#redoBtn').onclick=doRedo;
+    $('#toggleViewBtn').onclick=()=>{view=view==='hand'?'detail':'hand';refresh()};
+    $('#randomBtn').onclick=()=>{const p=PRESETS[Math.floor(Math.random()*PRESETS.length)];transact(()=>{state.nails=makePreset(p.id);state.preset=p.id;state.shape=['almond','oval','coffin','square'][Math.floor(Math.random()*4)];state.length=1+Math.floor(Math.random()*3)},false);toast('¡Nuevo look sorpresa! ✨')};
+    $('#exportBtn').onclick=exportPNG;
+    $('#saveBtn').onclick=saveLook;
+    $('#navSaved').onclick=openSaved;
+    $('#navStudio').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+    $('#closeModal').onclick=closeSaved;
+    $('#savedModal').onclick=e=>{if(e.target.id==='savedModal')closeSaved()};
+    window.addEventListener('keydown',e=>{if(e.key==='Escape')closeSaved();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){e.preventDefault();e.shiftKey?doRedo():doUndo()}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='y'){e.preventDefault();doRedo()}});
+    $('#uploadZone').onclick=()=>$('#imageInput').click();
+    $('#imageInput').onchange=e=>{if(e.target.files?.[0])importImage(e.target.files[0]);e.target.value=''};
+    $('#imageScale').oninput=e=>{state.imageScale=+e.target.value;$('#imageScaleLabel').textContent=state.imageScale+'%';persist()};
+    $('#imageOpacity').oninput=e=>{state.imageOpacity=+e.target.value;$('#imageOpacityLabel').textContent=state.imageOpacity+'%';persist()};
+    $('#applyImageBtn').onclick=()=>{if(!state.reference)return;transact(()=>affected().forEach(i=>{state.nails[i].image={src:state.reference.src,scale:state.imageScale,opacity:state.imageOpacity/100}}));toast('Imagen aplicada a la uña ✨')};
+    $('#clearImageBtn').onclick=()=>transact(()=>affected().forEach(i=>state.nails[i].image=null));
+    $('#removeImage').onclick=()=>{state.reference=null;refresh();persist()};
+    const openPinterest=()=>{const q=$('#pinterestQuery').value.trim()||'nail art';window.open('https://www.pinterest.com/search/pins/?q='+encodeURIComponent(q),'_blank','noopener,noreferrer')};
+    $('#pinterestSearchBtn').onclick=openPinterest;$('#pinterestQuery').onkeydown=e=>{if(e.key==='Enter')openPinterest()};
+    $$('.search-tags button').forEach(b=>b.onclick=()=>{$('#pinterestQuery').value=b.dataset.search;openPinterest()});
+    $('#canvasWrap').addEventListener('dragover',e=>{e.preventDefault();$('#canvasWrap').style.outline='3px dashed #b8688a'});
+    $('#canvasWrap').addEventListener('dragleave',()=>$('#canvasWrap').style.outline='');
+    $('#canvasWrap').addEventListener('drop',e=>{e.preventDefault();$('#canvasWrap').style.outline='';const f=[...e.dataTransfer.files].find(f=>/^image\//.test(f.type));if(f){state.tab='image';importImage(f)}});
+  }
+  function importImage(file){
+    if(!['image/png','image/jpeg','image/webp'].includes(file.type)){toast('Elegí una imagen JPG, PNG o WebP.');return}
+    if(file.size>10*1024*1024){toast('La imagen debe pesar menos de 10 MB.');return}
+    const reader=new FileReader();reader.onload=()=>{const img=new Image();img.onload=()=>{const max=1100,scale=Math.min(1,max/Math.max(img.width,img.height)),tmp=document.createElement('canvas');tmp.width=Math.round(img.width*scale);tmp.height=Math.round(img.height*scale);tmp.getContext('2d').drawImage(img,0,0,tmp.width,tmp.height);const src=tmp.toDataURL('image/jpeg',.82);state.reference={src,name:file.name.substring(0,40)};state.tab='image';refresh();persist();toast('Imagen importada. Podés aplicarla como textura.')};img.onerror=()=>toast('No se pudo leer la imagen.');img.src=reader.result};reader.onerror=()=>toast('No se pudo cargar el archivo.');reader.readAsDataURL(file)
+  }
+  function coords(e){const rect=canvas.getBoundingClientRect();return {x:(e.clientX-rect.left)*canvasW/rect.width,y:(e.clientY-rect.top)*canvasH/rect.height}}
+  function nailHit(x,y){const rects=getNailRects();for(let i=rects.length-1;i>=0;i--){const r=rects[i],path=nailPath(r.cx,r.y,r.w,r.h,state.shape);if(ctx.isPointInPath(path,x,y))return r}return null}
+  function relPoint(r,x,y){return [clamp((x-(r.cx-r.w/2))/r.w,-.5,1.5),clamp((y-r.y)/r.h,-.5,1.5)]}
+  function eraseNearest(r,x,y){const n=state.nails[r.index],p=relPoint(r,x,y);let closest=-1,dist=.18,type='decals';n.decals.forEach((d,i)=>{const dx=(d.x-p[0])*.8,dy=d.y-p[1],d2=Math.sqrt(dx*dx+dy*dy);if(d2<dist){dist=d2;closest=i;type='decals'}});(n.strokes||[]).forEach((s,i)=>{for(const pt of s.points){const d2=Math.hypot((pt[0]-p[0])*.8,pt[1]-p[1]);if(d2<dist){dist=d2;closest=i;type='strokes'}}});if(closest>=0)n[type].splice(closest,1)}
+  canvas.addEventListener('pointerdown',e=>{
+    if(e.button!==0&&e.pointerType==='mouse')return;
+    const p=coords(e),r=nailHit(p.x,p.y);if(!r)return;
+    if(state.selected!==r.index){state.selected=r.index;refresh();persist();if(state.tool==='select')return}
+    if(state.tool==='select')return;
+    e.preventDefault();canvas.setPointerCapture(e.pointerId);pushUndo();strokesActive=true;
+    const [x,y]=relPoint(r,p.x,p.y),n=state.nails[r.index];
+    if(state.tool==='brush'){activeStroke={color:state.artColor,size:state.brushSize,points:[[x,y]]};n.strokes.push(activeStroke)}
+    else if(state.tool==='dot'){n.decals.push(deco('dot',x,y,state.artColor,state.brushSize/5))}
+    else if(state.tool==='sticker'){n.decals.push(deco(state.sticker,x,y,state.artColor,state.brushSize/7+0.8))}
+    else if(state.tool==='eraser'){eraseNearest(r,p.x,p.y)}
+    state.preset=null;refresh();persist();
+  });
+  canvas.addEventListener('pointermove',e=>{if(!strokesActive||state.tool!=='brush'||!activeStroke)return;const p=coords(e),r=getNailRects().find(r=>r.index===state.selected);if(!r)return;activeStroke.points.push(relPoint(r,p.x,p.y));render()});
+  const endStroke=()=>{if(!strokesActive)return;strokesActive=false;activeStroke=null;persist();refresh()};
+  canvas.addEventListener('pointerup',endStroke);canvas.addEventListener('pointercancel',endStroke);
+  canvas.addEventListener('lostpointercapture',endStroke);
+  function exportPNG(){
+    const prev=view;view='hand';render();const exportCanvas=document.createElement('canvas'),w=2000,h=1200;exportCanvas.width=w;exportCanvas.height=h;const ectx=exportCanvas.getContext('2d');ectx.drawImage(canvas,0,0,w,h);
+    view=prev;refresh();const a=document.createElement('a');a.download='naile-mi-diseno-'+new Date().toISOString().slice(0,10)+'.png';a.href=exportCanvas.toDataURL('image/png');document.body.append(a);a.click();a.remove();toast('¡Tu diseño se descargó en PNG!')
+  }
+  function saveLook(){
+    const name=prompt('¿Cómo querés llamar a tu diseño?','Mi look '+(saved.length+1));if(name===null)return;
+    if(saved.length>=24){toast('Podés guardar hasta 24 diseños. Borrá uno para continuar.');return}
+    const item={id:String(Date.now()),name:(name.trim()||'Mi nail art').substring(0,50),date:new Date().toLocaleDateString('es-UY'),design:clone({nails:state.nails,shape:state.shape,length:state.length,skin:state.skin})};saved.unshift(item);
+    try{localStorage.setItem(SAVED,JSON.stringify(saved));toast('Look guardado en Mis diseños ♡')}catch(e){saved.shift();toast('No hay suficiente espacio para guardar. Probá quitar imágenes.')}
+    updateUI();
+  }
+  function openSaved(){renderSaved();$('#savedModal').hidden=false;document.body.style.overflow='hidden'}
+  function closeSaved(){$('#savedModal').hidden=true;document.body.style.overflow=''}
+  function renderSaved(){const gallery=$('#savedGallery');gallery.innerHTML='';if(!saved.length){gallery.innerHTML='<div class="empty-saved"><span>♡</span><strong>Todavía no guardaste ningún look</strong><p>Cuando crees uno que ames, tocá «Guardar look».</p></div>';return}
+    saved.forEach(item=>{const card=document.createElement('div');card.className='saved-item';const thumb=document.createElement('canvas');card.appendChild(thumb);renderThumb(thumb,null,true,item.design.nails,item.design.shape,item.design.length);const title=document.createElement('strong');title.textContent=item.name;card.appendChild(title);const date=document.createElement('div');date.className='saved-date';date.textContent=item.date;card.appendChild(date);const actions=document.createElement('div');actions.className='saved-item-actions';const load=document.createElement('button');load.textContent='Usar look';load.onclick=()=>{transact(()=>{state.nails=clone(item.design.nails);state.shape=item.design.shape;state.length=item.design.length;state.skin=item.design.skin});closeSaved();toast('Look cargado ♡')};const del=document.createElement('button');del.className='delete-saved';del.textContent='✕';del.title='Eliminar';del.onclick=()=>{if(!confirm('¿Eliminar este look de tu colección?'))return;saved=saved.filter(s=>s.id!==item.id);try{localStorage.setItem(SAVED,JSON.stringify(saved))}catch(e){}renderSaved();updateUI()};actions.append(load,del);card.appendChild(actions);gallery.appendChild(card)})
+  }
+  initControls();fillPresets();refresh();
+})();
+
+</script>
+</body>
+</html>
